@@ -19,8 +19,10 @@ export default VisJsChild.extend({
    * @type {String}
    */
   to: '',
+  id: null,
 
-  eId: Ember.computed('from', 'to', function() {
+  eId: Ember.computed('from', 'to', 'id', function() {
+    console.log('DEBUG', this.get('id'), this.get('from'), this.get('to'));
     return `${this.get('from')}-${this.get('to')}`;
   }),
 
