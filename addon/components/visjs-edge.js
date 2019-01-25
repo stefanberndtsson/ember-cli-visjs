@@ -23,7 +23,11 @@ export default VisJsChild.extend({
 
   eId: Ember.computed('from', 'to', 'id', function() {
     console.log('DEBUG', this.get('id'), this.get('from'), this.get('to'));
-    return `${this.get('from')}-${this.get('to')}`;
+    if(this.get('id')) {
+      return this.get('id');
+    } else {
+      return `${this.get('from')}-${this.get('to')}`;
+    }
   }),
 
   arrowChanged: Ember.observer('arrows', function() {
