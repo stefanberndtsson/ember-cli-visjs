@@ -24,6 +24,7 @@ export default VisJsChild.extend({
 
   colorChanged: Ember.observer('color', function() {
     let container = this.get('containerLayer');
+    console.log('Changing Node color to', this.get('nId'), this.get('color'));
     container.updateNodeColor(this.get('nId'), this.get('color'));
   }),
 

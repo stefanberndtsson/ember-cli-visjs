@@ -24,6 +24,7 @@ export default VisJsChild.extend({
 
   colorChanged: Ember.observer('color', function() {
     let container = this.get('containerLayer');
+    console.log('Changing Edge color to', this.get('eId'), this.get('color'));
     container.updateEdgeColor(this.get('eId'), this.get('color'));
   }),
 
