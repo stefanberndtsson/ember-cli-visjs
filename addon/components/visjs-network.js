@@ -226,6 +226,10 @@ export default Ember.Component.extend(ContainerMixin, {
     this.get('nodes').update({ id: nId, color });
   },
 
+  updateEdgeColor(eId, color) {
+    this.get('edges').update({ id: eId, color });
+  },
+
   updateNodeLabel(nId, label) {
     label = label ? label : undefined;
     this.get('nodes').update({ id: nId, label });

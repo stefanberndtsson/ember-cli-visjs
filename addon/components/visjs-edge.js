@@ -20,7 +20,13 @@ export default VisJsChild.extend({
    */
   to: '',
   id: null,
-  color: '#f00',
+  color: false,
+
+  colorChanged: Ember.observer('color', function() {
+    let container = this.get('containerLayer');
+    container.updateEdgeColor(this.get('eId'), this.get('color'));
+  }),
+
 
   eId: Ember.computed('from', 'to', 'id', function() {
     console.log('DEBUG', this.get('id'), this.get('from'), this.get('to'));
