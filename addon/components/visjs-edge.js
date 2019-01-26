@@ -20,6 +20,7 @@ export default VisJsChild.extend({
    */
   to: '',
   id: null,
+  color: '#f00',
 
   eId: Ember.computed('from', 'to', 'id', function() {
     console.log('DEBUG', this.get('id'), this.get('from'), this.get('to'));
