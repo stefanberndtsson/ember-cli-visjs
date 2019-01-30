@@ -174,6 +174,7 @@ export default Ember.Component.extend(ContainerMixin, {
     }
 
     if (node.get('nophysics')) {
+      console.log('Got nophysics for node', node.get('label'));
       simplifiedNode.physics = false;
     }
     
