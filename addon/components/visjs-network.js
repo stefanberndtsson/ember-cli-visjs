@@ -173,6 +173,10 @@ export default Ember.Component.extend(ContainerMixin, {
       simplifiedNode.color = node.get('color');
     }
 
+    if (node.get('nophysics')) {
+      simplifiedNode.physics = false;
+    }
+    
     if (node.get('posX') || node.get('posX') === 0) {
       simplifiedNode.x = node.get('posX');
     }
